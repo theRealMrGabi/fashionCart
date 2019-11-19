@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fashion store</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+            <div class="navigation">
+                <a class="navbar-brand" href="#">
+                    <img src="./img/fashion-logo.png" class="img-fluid" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="toggler-icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+                </button>
+            </div>
+           
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav text-capitalize mx-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#wedding">wedding</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#dress">dress</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#skirt">skirt</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#watch">watch</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#shoes">shoes</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Nav info and cart info -->
+            <div class="nav-info-items d-lg-flex">
+                    <!-- contact-->
+                <div class="nav-info align-items-center d-none d-lg-flex justify-content-between mx-lg-5">
+                    <span class="info-icon mx-lg-3">
+                        <i class="fas fa-phone"></i>
+                    </span>
+                    <p class="mb-0">+1 234 567 890</p>
+                </div>
+                    <!-- cart info -->
+                <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                    <span class="cart-info__icon mr-lg-3">
+                        <i class="fas fa-shopping-cart"></i>
+                    </span>
+                    <p class="mb-0 text-capitalize">
+                        <span id="item-count">
+                            <!-- 2 -->
+                        </span>
+                            items - $
+                        <span class="item-total">
+                            <!-- 10.49 -->
+                        </span>
+                    </p>
+                 </div>
+            </div>
+            <!-- end of Nav info and cart info -->
+        </nav>
+    </header>    
+
+    <div data-spy="scroll" data-target="#allSection" data-offset="0">
+        <section class="home max-height justify-content-center align-content-center" id="home">
+            <div id="carouselImages" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselImages" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselImages" data-slide-to="1"></li>
+                <li data-target="#carouselImages" data-slide-to="2"></li>
+                <li data-target="#carouselImages" data-slide-to="3"></li>
+                <li data-target="#carouselImages" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" style="background-image: url(./img/slide-shopping.jpg);">
+                    <div class="carousel-caption text-center">
+                        <h1 class="text-capitalize">
+                            explore our <strong class="banner-title">shopping world</strong>
+                        </h1>
+                        <a href="#home" class="btn banner-link text-uppercase my-2">Start shopping</a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url(./img/slide-dress.jpg);">
+                    <div class="carousel-caption text-center">
+                        <h1 class="text-capitalize">
+                            amazing <strong class="banner-title">evening dress</strong>
+                        </h1>
+                        <a href="#dress" class="btn banner-link text-uppercase my-2">Explore</a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url(./img/slide-shoes.jpg);">
+                    <div class="carousel-caption text-center">
+                        <h1 class="text-capitalize">
+                            classic <strong class="banner-title">shoes</strong>
+                        </h1>
+                        <a href="#shoes" class="btn banner-link text-uppercase my-2">explore</a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url(./img/slide-skirt.jpg);">
+                    <div class="carousel-caption text-center">
+                        <h1 class="text-capitalize">
+                            beautiful <strong class="banner-title">office skirt</strong>
+                        </h1>
+                        <a href="#skirt" class="btn banner-link text-uppercase my-2">explore</a>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url(./img/slide-wedding.jpg);">
+                    <div class="carousel-caption text-center">
+                        <h1 class="text-capitalize">
+                            exquisite <strong class="banner-title">wedding dress</strong>
+                        </h1>
+                        <a href="#wedding" class="btn banner-link text-uppercase my-2">explore</a>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselImages" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselImages" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            </div>
+
+            <!-- cart -->
+            <div class="cart" id="cart">
+                <!-- cart item -->
+                <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                    <!-- <img src="./img-cart/cake-1.jpeg" id="item-img" class="img-fluid rounded-circle" alt="">
+                    <div class="item-tex">
+                        <p id="cart-item-title" class="font-weight-bold mb-0">
+                            Cart item
+                        </p>
+                        <span>$</span>
+                        <span id="cart-item-price" class="cart-item-price mb-0">10.99</span>
+                    </div>
+                    <a href="#" id="cart-item-remove" class="cart-item-remove">
+                        <i class="fas fa-trash"></i> -->
+                    </a>
+                </div>
+                <!--end of cart item -->
+                <!-- cart item -->
+                <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                    <!-- <img src="./img-cart/cake-2.jpeg" id="item-img" class="img-fluid rounded-circle" alt="">
+                    <div class="item-tex">
+                        <p id="cart-item-title" class="font-weight-bold mb-0">
+                            Cart item
+                        </p>
+                        <span>$</span>
+                        <span id="cart-item-price" class="cart-item-price mb-0">10.99</span>
+                    </div>
+                    <a href="#" id="cart-item-remove" class="cart-item-remove">
+                        <i class="fas fa-trash"></i>
+                    </a> -->
+                </div>
+                <!--end of cart item -->
+
+                <!-- total -->
+                <div class="d-flex justify-content-around cart-total-container text-capitalize mt-5">
+                    <h5>total</h5>
+                    <h5>$ <strong id="cart-total" class="font-weight-bold"></strong></h5>
+                </div>
+                <!-- end oftotal -->
+
+                <!-- cart buttons -->
+                <div class="cart-button-container d-flex justify-content-between mt-3">
+                    <a href="#" id="clear-cart" class="btn btn-pink text-uppercase">clear cart</a>
+                    <a href="#" id="clear-cart" class="btn btn-pink text-uppercase">checkout</a>
+                </div>
+                <!-- end of cart buttons -->
+            </div>
+            <!-- end of cart -->
+        </section>
+
+        <section class="about mx-auto py-5" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-10 mx-auto my-4">
+                        <h1>About <strong class="banner-title">Us</strong></h1>
+                        <p class="my-5 text-muted w-75">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Porro quis adipisci omnis dolorem fugiat veniam enim alias magni quos, 
+                            vero illo deserunt ex dolorum repudiandae nam rem nesciunt amet et?
+                        </p>
+                        <a href="#" class="btn banner-link text-uppercase">Explore</a>
+                    </div>
+
+                    <div class="col-md-6 col-10 mx-auto align-self-center my-5">
+                        <div class="about-img__container">
+                            <img src="./img/about-photo.jpg" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="our-store py-5" id="our-store">
+            <div class="container">
+                <div class="row">
+                    <div class="text-center mx-auto text-capitalize col-lg-10 col-sm-6">
+                        <h1>our <strong class="banner-title">store</strong></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mx-auto d-flex justify-content-around flex-wrap col-lg-8">
+                        <a href="#" class="btn btn-pink text-uppercase m-2" data-filter="all">Wedding</a>
+                        <a href="#" class="btn btn-pink text-uppercase m-2" data-filter="all">dress</a>
+                        <a href="#" class="btn btn-pink text-uppercase m-2" data-filter="all">skirt</a>
+                        <a href="#" class="btn btn-pink text-uppercase m-2" data-filter="all">Watch</a>
+                        <a href="#" class="btn btn-pink text-uppercase m-2" data-filter="all">shoes</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="mx-auto col-lg-4 col-md-6 col-8 mt-3">
+                        <form>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text search-box">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </div>
+                                <input type="text" placeholder="text..." class="text-muted form-control">
+                            </div>
+                        </form>                           
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wedding" id="wedding">
+        <div class="container py-5">
+            <!-- section title -->
+            <div class="section-title mx-auto col-lg-8 col-sm-6 text-capitalize text-center">
+                <h3>exquisite <strong class="banner-title">wedding collections</strong></h3>
+            </div>
+
+            <!-- col-10 col-sm-6 col-lg-8  -->
+            <!-- section title -->
+
+            <div class="row skirt-items">
+                    <!-- single item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/wedding-1.jpg" alt="" class="card-img-top store-img">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                         <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">wedding gown</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">850</strong></h5>
+                        </div>  
+                         </div>
+                    </div>
+                   
+                </div>
+                    <!--  end ofsingle item -->
+
+                    <!-- single item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/wedding-2.jpg" alt="" class="card-img-top store-img">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="store-item-name">wedding</h5>
+                                    <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">900</strong></h5>
+                                </div>                        
+                        </div>
+                    </div>
+                    
+                </div>
+                    <!--  end ofsingle item -->
+                    <!-- single item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/wedding-3.jpg" alt="" class="card-img-top store-img">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                        <div class="card-text d-flex justify-content-between text-capitalize">
+                            <h5 id="store-item-name">wedding</h5>
+                            <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">700</strong></h5>
+                        </div>                        
+                    </div>  
+                    </div>
+                    
+                </div>
+                    <!--  end ofsingle item -->
+                    <!-- single item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/wedding-3.jpg" alt="" class="card-img-top store-img">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="store-item-name">wedding gown</h5>
+                                    <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">850</strong></h5>
+                                </div>
+                                  
+                            </div>
+                    </div>
+               </div>
+                    <!--  end ofsingle item -->
+
+                    <!-- single item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/wedding-1.jpg" alt="" class="card-img-top store-img">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="store-item-name">wedding</h5>
+                                    <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">900</strong></h5>
+                                </div>                        
+                            </div>
+                    </div>
+                    
+                </div>
+                    <!--  end ofsingle item -->
+                    <!-- single item -->
+                <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                    <div class="card single-item">
+                        <div class="img-container">
+                            <img src="./img/wedding-2.jpg" alt="" class="card-img-top store-img">
+                            <span class="store-item-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                                <div class="card-text d-flex justify-content-between text-capitalize">
+                                    <h5 id="store-item-name">wedding</h5>
+                                    <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">700</strong></h5>
+                                </div>                        
+                            </div>
+                    </div>
+                   
+                </div>
+                    <!--  end ofsingle item -->
+            </div>
+        </div>
+        </section>
+    
+        <section class="dress" id="dress">
+            <div class="container">
+                <!-- section title -->
+                <!-- col-lg-8 col-sm-6 text-capitalize text-center -->
+            <div class="section-title mx-auto col-sm-6 col-lg-8 text-center text-capitalize py-5">
+                <h3>exquisite <strong class="banner-title">casual dress</strong></h3>
+            </div>
+                <!-- section title -->
+                <div class="row skirt-items">
+                    <!-- single items -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="img/dress-1.jpg" class="card-img-top store-img" alt="">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body ">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 class="store-item-name">dress</h5>
+                                        <h5 class="store-item-value">$ <strong class="font-weight-bold" id="store-item-price">98</strong></h5>
+                                    </div>
+                                </div>
+                        </div>
+
+                       
+                    </div>
+                    <!--end of single items -->
+                    <!-- single items -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="img/dress-2.jpg" class="card-img-top store-img" alt="">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body ">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 class="store-item-name">dress</h5>
+                                        <h5 class="store-item-value">$ <strong class="font-weight-bold" id="store-item-price">98</strong></h5>
+                                    </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    <!--end of single items -->
+                    <!-- single items -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="img/dress-3.jpg" class="card-img-top store-img" alt="">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body ">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 class="store-item-name">dress</h5>
+                                        <h5 class="store-item-value">$ <strong class="font-weight-bold" id="store-item-price">98</strong></h5>
+                                    </div>
+                                </div>
+                        </div>   
+                    </div>
+                    <!--end of single items -->
+                    <!-- single items -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="img/dress-2.jpg" class="card-img-top store-img" alt="">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body ">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 class="store-item-name">dress</h5>
+                                        <h5 class="store-item-value">$ <strong class="font-weight-bold" id="store-item-price">98</strong></h5>
+                                    </div>
+                            </div>
+                        </div>
+                     </div>
+                    <!--end of single items -->
+                    <!-- single items -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="img/dress-3.jpg" class="card-img-top store-img" alt="">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body ">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 class="store-item-name">dress</h5>
+                                        <h5 class="store-item-value">$ <strong class="font-weight-bold" id="store-item-price">98</strong></h5>
+                                    </div>
+                                </div>
+                        </div>
+
+                        
+                    </div>
+                    <!--end of single items -->
+                    <!-- single items -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="img/dress-1.jpg" class="card-img-top store-img" alt="">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body ">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 class="store-item-name">dress</h5>
+                                        <h5 class="store-item-value">$ <strong class="font-weight-bold" id="store-item-price">98</strong></h5>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <!--end of single items -->
+                </div>
+            </div>
+            
+        </section>
+    
+        <section class="skirt" id="skirt">
+            <div class="container">
+                 <div class="section-title mx-auto col-sm-6 col-lg-8 text-center text-capitalize py-5">
+                    <h3>exquisite <strong class="banner-title">casual skirt</strong></h3>
+                </div>
+                <div class="row skirt-items">
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/skirt-1.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">skirt</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>
+                                  
+                                </div>
+
+                        </div>
+                        
+                    </div>
+                    <!--  end ofsingle item -->
+
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/skirt-2.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">skirt</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>                        
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <!--  end ofsingle item -->
+
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/skirt-3.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">skirt</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>                        
+                                </div>
+
+                        </div>
+                        
+                    </div>
+                    <!--  end ofsingle item -->
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/skirt-3.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">skirt</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>                        
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <!--  end ofsingle item -->
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/skirt-1.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">skirt</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>                        
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <!--  end ofsingle item -->
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/skirt-2.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">skirt</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>                        
+                            </div>
+                        </div>                       
+                    </div>
+                    <!--  end ofsingle item -->
+
+                </div>
+            </div>
+        </section>
+
+        <section class="custom-order">
+            <div class="container my-3">
+                <div class="row">
+                    <div class="scustom-order-title mx-auto col-sm-6 col-lg-8 text-center text-capitalize py-5">
+                        <h3>request for <strong class="banner-title">custom order</strong></h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- single item -->
+                    <div class="col-md-6 col-11 col-lg-4 text-center mx-auto text-capitalize">
+                        <h3>custom jacket</h3>
+                        <div class="muted-text">
+                            <p class="my-3">custom design</p>
+                            <p class="my-3">custom size</p>
+                            <p class="my-3">customized name</p>
+                            <p class="my-3">customized engraving</p>
+                            <button type="button" class="btn btn-pink text-capitalize">Order now</button>
+                            <p class="my-3 text-lowercase">starting from $70</p>
+                            <!-- <img src="./img/fashion-watch.png" class="img-fluid" alt=""> -->
+                            <img src="./img/logo.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <!-- end of single item -->
+                    <!-- single item -->
+                    <div class="col-md-6 col-11 col-lg-4 text-center mx-auto text-capitalize">
+                        <h3>custom dress</h3>
+                        <div class="muted-text">
+                            <p class="my-3">custom design</p>
+                            <p class="my-3">custom size</p>
+                            <p class="my-3">customized name</p>
+                            <p class="my-3">customized engraving</p>
+                            <button type="button" class="btn btn-pink text-capitalize">Order now</button>
+                            <p class="my-3 text-lowercase">starting from $70</p>
+                            <img src="./img/fashion-dress.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <!-- end of single item -->
+                    <!-- single item -->
+                    <div class="col-md-6 col-11 col-lg-4 text-center mx-auto text-capitalize">
+                        <h3>custom shirt</h3>
+                        <div class="muted-text">
+                            <p class="my-3">custom design</p>
+                            <p class="my-3">custom size</p>
+                            <p class="my-3">customized name</p>
+                            <p class="my-3">customized engraving</p>
+                            <button type="button" class="btn btn-pink text-capitalize">Order now</button>
+                            <p class="my-3 text-lowercase">starting from $70</p>
+                            <img src="./img/fashion-jacket.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <!-- end of single item -->
+                </div>
+            </div>
+        </section>
+    
+        <section class="watch" id="watch">
+            <div class="container">
+                 <div class="section-title mx-auto col-sm-6 col-lg-8 text-center text-capitalize py-5">
+                    <h3>classic <strong class="banner-title">watches</strong></h3>
+                </div>
+                <div class="row skirt-items">
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/watch-1.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                       </div>
+                       <div class="card-body">
+                            <div class="card-text d-flex justify-content-between text-capitalize">
+                                <h5 id="store-item-name">watch</h5>
+                                <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                            </div>                          
+                       </div>
+                       
+                    </div>
+                    <!--  end ofsingle item -->
+
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/watch-2.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">watch</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>                        
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!--  end ofsingle item -->
+
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/watch-3.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">watch</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>                        
+                                </div>
+
+                        </div>
+                        
+                    </div>
+                    <!--  end ofsingle item -->
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/watch-4.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">watch</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>                        
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <!--  end ofsingle item -->
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/watch-5.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">watch</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>                        
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <!--  end ofsingle item -->
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/watch-2.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">swatch</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>                        
+                                </div>
+                        </div>
+                        
+                    </div>
+                    <!--  end ofsingle item -->
+                </div>
+            </div>
+        </section>
+    
+        <section class="shoes" id="shoes">
+            <div class="container">
+                <div class="section-title mx-auto col-sm-6 col-lg-8 text-center text-capitalize py-5">
+                    <h3>exquisite <strong class="banner-title">shoes</strong></h3>
+                </div>
+                <div class="row skirt-items">
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/shoe-1.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">shoes</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>
+                                  
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <!--  end ofsingle item -->
+
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/shoe-2.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">shoes</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>                        
+                                </div>
+
+                        </div>
+                        
+                    </div>
+                    <!--  end ofsingle item -->
+
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/shoe-3.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">shoes</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>                        
+                                </div>
+
+                        </div>
+                        
+                    </div>
+                    <!--  end ofsingle item -->
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/shoe-4.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">shoes</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>                        
+                            </div>
+
+                        </div>
+                       
+                    </div>
+                    <!--  end ofsingle item -->
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/shoe-5.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">shoes</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>                        
+                                </div>
+                        </div>
+                        
+                    </div>
+                    <!--  end ofsingle item -->
+                    <!-- single item -->
+                    <div class="col-10 col-sm-6 col-lg-4 mx-auto dress-item my-3">
+                        <div class="card single-item">
+                            <div class="img-container">
+                                <img src="./img/shoe-6.jpg" alt="" class="card-img-top store-img">
+                                <span class="store-item-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                    <div class="card-text d-flex justify-content-between text-capitalize">
+                                        <h5 id="store-item-name">shoes</h5>
+                                        <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">75</strong></h5>
+                                    </div>                        
+                                </div>
+                        </div>
+                        
+                    </div>
+                    <!--  end ofsingle item -->
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                 <div class="footer-name mx-auto text-center">
+                    <h3 class="banner-title text-lowercase">fashionCart <i class="fa fa-copyright" aria-hidden="true"></i></h3>
+                </div>
+                    <div class="row">
+                        <div class="col-md-6 py-5 footer-social mx-auto">
+                            <div class="d-flex flex-wrap justify-content-around mt-3 social-icon mx-auto">
+                                    <!-- footer-icons mt-3 d-flex justify-content-around flex-wrap -->
+                                <span class="footer-social-icons">
+                                <a href="#" class="footer-social-icon">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" class="footer-social-icon">
+                                    <i class="fab fa-twitter-square"></i>
+                                </a>
+                                <a href="#" class="footer-social-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="footer-social-icon">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                </span>
+                            </div>
+
+                                <div class="d-flex flex-wrap text-capitalize my-5">
+                                    <span class="mr-4 footer-icon">
+                                        <a href="#" class="footer-link">privacy policy</a>
+                                    </span>
+                                    <span class="mr-4 footer-icon">
+                                        <a href="#" class="footer-link">return policy</a>                                        
+                                    </span>
+                                    <span class="mr-4 footer-icon">
+                                        <a href="#" class="footer-link">about us</a>                                        
+                                    </span>
+                                </div>
+                        </div>
+
+                        <div class="col-md-6 p-5 footer-social text-center">
+                            <h3 class="mb-5">Contact</h3>
+                            <p class="d-flex flex-wrap">
+                                <span class="mr-4 footer-icon">
+                                    <i class="fas fa-map"></i>
+                                </span>
+                                <span>78, Fashion street, Paris, France</span>
+                            </p>
+                            <p class="d-flex flex-wrap">
+                                <span class="mr-4 footer-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                                <span>enquiries@fasioncart.com</span>
+                            </p>
+                            <p class="d-flex flex-wrap">
+                                <span class="mr-4 footer-icon">
+                                    <i class="fas fa-phone"></i>
+                                </span>
+                                <span>+1 234 567 890</span>
+                            </p>
+                        </div>
+                    </div>
+            </div>
+        </footer>
+    
+
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

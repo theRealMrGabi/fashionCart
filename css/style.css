@@ -207,23 +207,34 @@ body{
     color: var(--mainBlue);
     letter-spacing: 2.5rem;
     transition: all 0.4s ease-in-out;
+    text-decoration: none;
 }
 .footer-social-icon:hover{
     color: var(--offBckg);
+    text-decoration: none;
+
 }
 .footer-icon{
     font-size: 1.5rem;
     color: var(--mainBlue);
     transition: all 0.4s ease-in-out;
+    text-decoration: none;
+
 }
 .footer-icon:hover{
     color: var(--offBckg);
+    text-decoration: none;
+
 }
 .footer-link{
     color: var(--offPurple);
+    text-decoration: none;
+
 }
 .footer-link:hover{
     color: var(--primary);
+    text-decoration: none;
+
 }
 
 
